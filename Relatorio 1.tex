@@ -1,0 +1,328 @@
+\documentclass[letterpaper,10pt,final]{article}% pode colocar final ou draft
+\usepackage[letterpaper,hmargin={2.5cm,2.5cm},vmargin={2.5cm,2.5cm}]{geometry}%controle de margens-muito bom pacote
+\linespread{1.0}%1 para normal, 1.3 para 1 1/2 e 1.6 para espaçamento duplo
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{icomma}
+\usepackage{comment}
+\usepackage{multicol}
+%\usepackage{textcomp}
+\usepackage{amsthm,amsfonts,amssymb,amsxtra}
+\usepackage[all]{xy}
+\usepackage{enumerate}    % Este pacote é para mudar o padrão do ENUMERATE
+\usepackage{graphicx,color}
+%\usepackage{psfrag}
+%\pagestyle{plain}% numera as paginas no centro rodapé
+\usepackage{indentfirst}                % identar primeiro parágrafo
+\usepackage[subfigure]{ccaption}             % controle dos captions dos floats
+%\captionstyle{\raggedright }                 % Captions começando da esquerda para direita
+%\raggedright, \centering e \raggedleft      %  são alternativas
+%\hangcaption                                % identar  o título da tabela
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage{titletoc}                                 % não identar sumario
+\dottedcontents{chapter}[1.2cm]{}{1.2cm}{1pc}         % não identar sumario
+\dottedcontents{section}[1.2cm]{}{1.2cm}{1pc}         % não identar sumario
+\dottedcontents{subsection}[1.2cm]{}{1.2cm}{1pc}      % não identar sumario
+\dottedcontents{subsubsection}[1.2cm]{}{1.2cm}{1pc}   % não identar sumario
+
+\usepackage{latexsym}
+\usepackage{amstext}
+%\usepackage[dvips]{graphicx}
+%\usepackage[all]{xy}
+%\usepackage{tabularx}
+%\usepackage{setspace}
+%\usepackage{titletoc}
+%\dottedcontents{chapter}[1.2cm]{}{1.2cm}{1pc}
+%\dottedcontents{section}[1.2cm]{}{1.2cm}{1pc}
+%\dottedcontents{subsection}[1.2cm]{}{1.2cm}{1pc}
+%\dottedcontents{subsubsection}[1.2cm]{}{1.2cm}{1pc}
+
+\newcommand{\nequiv}{\equiv \hspace*{-12pt} / \hspace*{8pt}}
+\newcommand{\Eq}{equation}
+\newcommand{\EA}{eqnarray}
+\newcommand{\EM}{multline}
+\newcommand{\aaa}{\`a }
+\newcommand{\eee }{\`{e} }
+
+\newcommand{\eie}{\'{e} }
+\newcommand{\iii}{\`{\i} }
+\newcommand{\ooo}{\`{o} }
+\newcommand{\uuu}{\`{u} }
+\newcommand{\AAA}{\`{A} }
+\newcommand{\EEE}{\`{E} }
+\newcommand{\EIE}{\'{E} }
+\newcommand{\III}{\`{I} }
+\newcommand{\OOO}{\`{O} }
+\newcommand{\UUU}{\`{U} }
+\newcommand{\bm}[1]{{\mathbf{#1}}}
+\newcommand{\cm}[1]{{\mathcal{#1}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+
+
+
+\newcommand{\hh}{{\,\,}}          % buono per a_b
+\newcommand{\Hh}{{\,\,\,}}
+\newcommand{\HH}{{\,\,\,\,}}
+\newcommand{\HHH}{{\,\,\,\,\,\,}} %uguale a \quad; qqquad e' il doppio
+\newcommand{\B}{{\!\!}}
+\newcommand{\BB}{{\!\!\!\!}}
+\newcommand{\BBB}{{\!\!\!\!\!\!}} %inverte caratteri, infatti 3! sovrappone
+\newcommand{\Cont}{{\mathcal{C}}}
+\newcommand{\Dcal}{{\mathcal{D}}}
+\newcommand{\nhu}[1]{\left\|{#1}\right\|_{H^1}}
+\newcommand{\nhm}[1]{\left\|{#1}\right\|_{H^m}}
+\newcommand{\nh}[1]{\left\|{#1}\right\|_{H}}
+\newcommand{\nr}[1]{\left\|{#1}\right\|_{r}}
+\newcommand{\n}[1]{\left\|{#1}\right\|}
+\newcommand{\m}[1]{\left|{#1}\right|}
+\newcommand{\croch}[1]{\langle{#1}\rangle}
+\newcommand{\nhd}[1]{\left\|{#1}\right\|_{H^2}}
+\newcommand{\nld}[1]{\left\|{#1}\right\|_{L^2}}
+\newcommand{\nLd}[1]{\left\|{#1}\right\|_{[L^2]^2}}
+\newcommand{\nE}[1]{\left\|{#1}\right\|_{E}}
+\newcommand{\nlp}[1]{\left\|{#1}\right\|_{L^p}}
+\newcommand{\nwp}[1]{\left\|{#1}\right\|_{W^{1,p}}}
+\newcommand{\nw}[1]{\left\|{#1}\right\|_{W}}
+\newcommand{\nwpr}[1]{\left\|{#1}\right\|_{W'}}
+\newcommand{\nli}[1]{\left\|{#1}\right\|_{L^\infty}}
+\newcommand{\pt}[1]{\left({#1}\right)}
+\newcommand{\pq}[1]{\left[{#1}\right]}
+\newcommand{\nhe}[1]{\left\|{#1}\right\|_{H}}
+
+\newcommand{\pg}[1]{\left\{{#1}\right\}}
+\newcommand{\scl}[1]{\langle\,{#1}\,\rangle}
+\newcommand{\utd}{\widetilde{u}}
+
+\newcommand{\uht}{\widehat{u}}
+\newcommand{\ubr}{\overline{u}}
+\DeclareMathOperator{\supess}{supess}
+\DeclareMathOperator{\infess}{infess}
+
+\newcommand{\prefp}[1]{(\ref{#1})}
+\newcommand{\pref}[1]{(\ref{#1})}
+%\newcommand{\tref}[1]{\ref{#1}\ }
+\newcommand{\trefp}[1]{\ref{#1}}
+\newcommand{\tref}[1]{\ref{#1}}
+
+\newcommand{\fuc}{Fu\v c\'\i k }
+\newcommand{\uc}[1]{\widehat{u_{#1}}}%\newcommand{\uc}{\widehat{u}}
+
+\newcommand{\sn}{sen \; }
+
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bz}{\mathbf{z}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bh}{\mathbf{h}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\Ldd}{[L^2]^2}
+\newcommand{\LOdd}{[L^2(\Omega)]^2}
+\newcommand{\ST}{\widehat{\Sigma}_{t}}
+\newcommand{\SNT}{\widehat{\Sigma}_{nt}}
+\newcommand{\SP}{\widehat{\Sigma}}
+
+\newcommand{\comm}[1]{{\emph{ \color{blue}{#1}}}}
+\newcommand{\commr}[1]{{\emph{ \color{red}{#1}}}}
+\newcommand{\commg}[1]{{\emph{ \color{green}{#1}}}}
+
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+
+\begin{document}
+
+		\begin{Figure}		
+			\centering
+			\includegraphics[width=17cm]{0002}
+		\end{Figure}
+		\thispagestyle{empty} % Serve para não numerar essa página, usados em capas de trabalhos.
+		\setcounter{page}{0}
+		\begin{Figure}		
+			\centering
+			\includegraphics[width=17cm]{0003}
+			\label{fig}
+			%   \captionof{figure}{my caption of the fugure}
+		\end{Figure}		
+		\thispagestyle{empty} 
+		\tableofcontents
+		\newpage
+		
+	\section{ Parte Experimental}
+		
+		$\textbf{1.1 - Materiais Utilizados:}$\\\\		
+    	$\bullet$	1 Protoboard\\
+		$\bullet$	1 Multímetro\\
+		$\bullet$	2 Fontes de Tensão (10V; 15V)\\
+		$\bullet$	5 Resistores (56 $\Omega$; 56$\Omega$;  3,9$\Omega$;  3,9$\Omega$  e  2,2$\Omega$)\\
+		$\bullet$	Fios de ligação\\\\\\
+		
+		$\textbf{1.2	- Procedimento Experimental:}$\\\\		
+		$\bullet$	$\textbf{Teorema de Thévenin:}$\\
+		
+		O Teorema de Thévenin nos diz que podemos substituir todo um circuito, com exceção ao bipolo em que se pode ter uma resistência variável, por um circuito equivalente contendo uma fonte de tensão $(Eth)$ em série com um resistor $(Rth)$. Dessa forma, o experimento consiste em comprovar essa relação citada acima.\\\\		
+		Inicialmente foi montado um circuito original, contendo: \\
+		- 1 Fonte de tensão de 15 V\\
+		- 1 Fonte de tensão de 10 V\\
+		- 2 Resistores de 56 $\Omega$\\
+		- 2 Resistores de 3,9 $\Omega$\\	
+		A figura abaixo ilustra o circuito montado:\\
+		
+		\begin{Figure}
+			\centering
+			\includegraphics[width=10cm]{Figura0}
+			\label{fig}
+			%   \captionof{figure}{my caption of the fugure}
+		\end{Figure}		
+		
+		Nesse circuito original, verificou-se os valores da corrente $I$ que passa pelo resistor de 2,2 $\Omega$ , e a queda de tensão $V$ causada por essa resistência. Então, foram obtidos os seguintes valores para $I$ e $V$:\\
+		
+		I = 0,076A \\
+		
+		V = 0,167V\\\\
+		
+		Para encontrar o circuito equivalente de Thévenin, mediu-se com o voltímetro, a tensão $(Eth)$ que existe entre os pontos A e B, retirando-se a resistência de 2,2$\Omega$ . A figura abaixo demonstra esse procedimento:
+		
+		\begin{Figure}		
+			\centering
+			\includegraphics[width=10cm]{Figura1}
+			\label{fig}
+			%   \captionof{figure}{my caption of the fugure}
+		\end{Figure}
+		
+			
+		O valor encontrado para o $Eth$ foi:\\
+		
+		$Eth = 2,461V $\\\\
+		Para encontrar o valor da resistência entre os terminais A e B, as fontes de tensões de 15$V$ e 10$V$ foram curto-circuitadas e assim, por meio da associação de resistores, calculou-se o valor de $Rth$. A figura abaixo demonstra esse procedimento:
+		
+		\begin{Figure}		
+		\centering
+		\includegraphics[width=10cm]{Figura2}
+		\label{fig}
+		%   \captionof{figure}{my caption of the fugure}
+	    \end{Figure}
+		
+		O valor encontrado para o $Rth$ foi:\\
+		
+		$Rth = 30,2\Omega $\\
+		
+		Com base nos valores de $Eth$ e $Rth$ calculados anteriormente, obteve-se o circuito equivalente de Thévenin ilustrado na figura abaixo:
+		
+		\begin{Figure}		
+			\centering
+			\includegraphics[width=8cm]{Figura3}
+			\label{fig}
+			%   \captionof{figure}{my caption of the fugure}
+		\end{Figure}
+		
+		Com base no circuito ilustrado pela Figura 4 (circuito equivalente de Thévenin), calculou-se o valores de $V$ e de $I$ na resistência de 2,2$\Omega$, por meio das equações abaixo:\\
+		
+		\begin{center}
+		$\displaystyle{I = \frac{Eth}{Rth+2,2}}$
+		\qquad Equação (1)\\
+	    \end{center}
+	
+		\begin{center}
+		$\displaystyle{V = 2,2 \cdot I}$		
+		\qquad Equação (2)\\
+		\end{center}
+		
+		Logo, os valores encontrados para $I$ e para $V$ foram:
+		
+		\vspace{0.2cm}
+		I = 0,075A\\
+		
+		V = 0,169V\\
+		
+		Dessa forma, concluiu-se que os valores de $I$ e de $V$ no circuito equivalente de Thévenin são aproximadamente iguais aos valores de $I$ e $V$ no circuito original. \\
+		
+		$\textbf{Teorema da superposição de efeitos:}$\\
+		
+		Usamos esse teorema quando temos mais de uma fonte sendo ela de tensão ou corrente. O teorema diz que:\\
+		
+		Quando um circuito possui mais de uma fonte de tensão ou corrente e somente elementos lineares, eliminamos um dos tipos de fonte e somamos algebricamente a outra. 
+		No somatório das tensões, as fontes de corrente são abertas e para o somatório das  correntes as fontes de tensão são colocadas em curto.
+		Se no circuito original temos  $V$ e $I$, teremos no teorema $V'$, $I'$, $V''$, $I''$ que se relacionam as seguinte forma:\\\\
+		$V = V'+V''$ \qquad(Equação 4)\\\\
+		$I = I'+I''$ \, \qquad(Equação 3)\\
+		
+		Onde, $V'$ e $I'$ são encontrados colocando o primeiro gerador de tensão em curto e o segundo em aberto.\\
+		Dessa forma, $V''$ e $I''$ são encontrados colocando o segundo gerador em curto e o primeiro em aberto.\\
+		Montando o circuito original, o mesmo do teorema de Thévenin:
+		
+		
+		\begin{Figure}		
+			\centering
+			\includegraphics[width=10cm]{Figura4}
+			\label{fig}
+			%   \captionof{figure}{my caption of the fugure}
+		\end{Figure}
+		
+		Aferindo- se os valores de $I$ e $V$ que passam pelo resistor de 2,2$\Omega$, obtendo então:
+		
+		
+		Aplicando o teorema da superposição de efeitos e anulando a tensão $E_2 = 10V:$
+		
+		\begin{Figure}		
+			\centering
+			\includegraphics[width=10cm]{Figura5}
+			\label{fig}
+			%   \captionof{figure}{my caption of the fugure}
+		\end{Figure}
+		
+				
+		Obtemos assim:\\
+		
+		$I' = 0,230A$\\
+		
+		$V' = 0,512V$\\
+		
+		Do circuito agora, anulamos  $E_1=15V$:
+		
+		\begin{Figure}		
+			\centering
+			\includegraphics[width=10cm]{Figura6}
+			\label{fig}
+			%   \captionof{figure}{my caption of the fugure}
+		\end{Figure}
+		
+		Assim, encontramos então:
+		
+		\vspace{0.2cm}
+		\hspace{0.5cm} $I'' = -0,155A$
+		
+		\vspace{0.2cm}
+		\hspace{0.5cm} $V''= -0,343V$
+		
+		\vspace{0.2cm}
+		Pela teoria que descrevemos e pelas equações 3 e 4, segue:
+		
+		\vspace{0.2cm}
+		$I'+I''= (0,230)+(-0,155) = 0,075A$
+		
+		\vspace{0.2cm}
+		$V'+V''= (0,512)+(-0,343) = 0,169V$
+		
+		\vspace{0.3cm}
+		Assim, percebemos que no circuito original temos $I$ e $V$ muito próximos ao Calculado Pelo Teorema da Superposição de Efeitos.\\\\
+		
+		$\textbf{Conclusão:}$\\	
+			
+		Na teoria, por meio do Teorema de Thévenin, calculamos a tensão e consequentemente a corrente entre dois pontos de um sistema. No experimento realizado no laboratório, além de constatarmos que o Teorema realmente é funcional, percebemos que o cálculo de $Eth$ e $Rth$ é bem mais simples do que na teoria (para tal tarefa utilizamos basicamente o voltímetro e amperímetro).
+		Posteriormente executamos o Teorema da superposição de efeitos, no qual retiramos uma fonte de cada vez para calcularmos tensão e corrente sobre o resistor depois somamos os resultados. Novamente comprovamos que o Teorema, como esperado, é válido (a soma dos resultados obtidos com apenas uma das fontes no sistema por vez, quando somados realmente são aproximadamente iguais ao medido com o multímetro com as duas fontes sobre o sistema).
+	
+		
+	
+	
+
+
+\end{document}
