@@ -1,0 +1,441 @@
+\documentclass[letterpaper,10pt,final]{article}% pode colocar final ou draft
+\usepackage[letterpaper,hmargin={2.5cm,2.5cm},vmargin={2.5cm,2.5cm}]{geometry}%controle de margens-muito bom pacote
+\linespread{1.0}%1 para normal, 1.3 para 1 1/2 e 1.6 para espaçamento duplo
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{icomma}
+\usepackage{comment}
+\usepackage{multicol}
+%\usepackage{textcomp}
+\usepackage{amsthm,amsfonts,amssymb,amsxtra}
+\usepackage[all]{xy}
+\usepackage{enumerate}    % Este pacote é para mudar o padrão do ENUMERATE
+\usepackage{graphicx,color}
+%\usepackage{psfrag}
+%\pagestyle{plain}% numera as paginas no centro rodapé
+\usepackage{indentfirst}                % identar primeiro parágrafo
+\usepackage[subfigure]{ccaption}             % controle dos captions dos floats
+%\captionstyle{\raggedright }                 % Captions começando da esquerda para direita
+%\raggedright, \centering e \raggedleft      %  são alternativas
+%\hangcaption                                % identar  o título da tabela
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage{titletoc}                                 % não identar sumario
+\dottedcontents{chapter}[1.2cm]{}{1.2cm}{1pc}         % não identar sumario
+\dottedcontents{section}[1.2cm]{}{1.2cm}{1pc}         % não identar sumario
+\dottedcontents{subsection}[1.2cm]{}{1.2cm}{1pc}      % não identar sumario
+\dottedcontents{subsubsection}[1.2cm]{}{1.2cm}{1pc}   % não identar sumario
+
+\usepackage{latexsym}
+\usepackage{amstext}
+%\usepackage[dvips]{graphicx}
+%\usepackage[all]{xy}
+%\usepackage{tabularx}
+%\usepackage{setspace}
+%\usepackage{titletoc}
+%\dottedcontents{chapter}[1.2cm]{}{1.2cm}{1pc}
+%\dottedcontents{section}[1.2cm]{}{1.2cm}{1pc}
+%\dottedcontents{subsection}[1.2cm]{}{1.2cm}{1pc}
+%\dottedcontents{subsubsection}[1.2cm]{}{1.2cm}{1pc}
+
+\newcommand{\nequiv}{\equiv \hspace*{-12pt} / \hspace*{8pt}}
+\newcommand{\Eq}{equation}
+\newcommand{\EA}{eqnarray}
+\newcommand{\EM}{multline}
+\newcommand{\aaa}{\`a }
+\newcommand{\eee }{\`{e} }
+
+\newcommand{\eie}{\'{e} }
+\newcommand{\iii}{\`{\i} }
+\newcommand{\ooo}{\`{o} }
+\newcommand{\uuu}{\`{u} }
+\newcommand{\AAA}{\`{A} }
+\newcommand{\EEE}{\`{E} }
+\newcommand{\EIE}{\'{E} }
+\newcommand{\III}{\`{I} }
+\newcommand{\OOO}{\`{O} }
+\newcommand{\UUU}{\`{U} }
+\newcommand{\bm}[1]{{\mathbf{#1}}}
+\newcommand{\cm}[1]{{\mathcal{#1}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+
+
+
+\newcommand{\hh}{{\,\,}}          % buono per a_b
+\newcommand{\Hh}{{\,\,\,}}
+\newcommand{\HH}{{\,\,\,\,}}
+\newcommand{\HHH}{{\,\,\,\,\,\,}} %uguale a \quad; qqquad e' il doppio
+\newcommand{\B}{{\!\!}}
+\newcommand{\BB}{{\!\!\!\!}}
+\newcommand{\BBB}{{\!\!\!\!\!\!}} %inverte caratteri, infatti 3! sovrappone
+\newcommand{\Cont}{{\mathcal{C}}}
+\newcommand{\Dcal}{{\mathcal{D}}}
+\newcommand{\nhu}[1]{\left\|{#1}\right\|_{H^1}}
+\newcommand{\nhm}[1]{\left\|{#1}\right\|_{H^m}}
+\newcommand{\nh}[1]{\left\|{#1}\right\|_{H}}
+\newcommand{\nr}[1]{\left\|{#1}\right\|_{r}}
+\newcommand{\n}[1]{\left\|{#1}\right\|}
+\newcommand{\m}[1]{\left|{#1}\right|}
+\newcommand{\croch}[1]{\langle{#1}\rangle}
+\newcommand{\nhd}[1]{\left\|{#1}\right\|_{H^2}}
+\newcommand{\nld}[1]{\left\|{#1}\right\|_{L^2}}
+\newcommand{\nLd}[1]{\left\|{#1}\right\|_{[L^2]^2}}
+\newcommand{\nE}[1]{\left\|{#1}\right\|_{E}}
+\newcommand{\nlp}[1]{\left\|{#1}\right\|_{L^p}}
+\newcommand{\nwp}[1]{\left\|{#1}\right\|_{W^{1,p}}}
+\newcommand{\nw}[1]{\left\|{#1}\right\|_{W}}
+\newcommand{\nwpr}[1]{\left\|{#1}\right\|_{W'}}
+\newcommand{\nli}[1]{\left\|{#1}\right\|_{L^\infty}}
+\newcommand{\pt}[1]{\left({#1}\right)}
+\newcommand{\pq}[1]{\left[{#1}\right]}
+\newcommand{\nhe}[1]{\left\|{#1}\right\|_{H}}
+
+\newcommand{\pg}[1]{\left\{{#1}\right\}}
+\newcommand{\scl}[1]{\langle\,{#1}\,\rangle}
+\newcommand{\utd}{\widetilde{u}}
+
+\newcommand{\uht}{\widehat{u}}
+\newcommand{\ubr}{\overline{u}}
+\DeclareMathOperator{\supess}{supess}
+\DeclareMathOperator{\infess}{infess}
+
+\newcommand{\prefp}[1]{(\ref{#1})}
+\newcommand{\pref}[1]{(\ref{#1})}
+%\newcommand{\tref}[1]{\ref{#1}\ }
+\newcommand{\trefp}[1]{\ref{#1}}
+\newcommand{\tref}[1]{\ref{#1}}
+
+\newcommand{\fuc}{Fu\v c\'\i k }
+\newcommand{\uc}[1]{\widehat{u_{#1}}}%\newcommand{\uc}{\widehat{u}}
+
+\newcommand{\sn}{sen \; }
+
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bz}{\mathbf{z}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bh}{\mathbf{h}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\Ldd}{[L^2]^2}
+\newcommand{\LOdd}{[L^2(\Omega)]^2}
+\newcommand{\ST}{\widehat{\Sigma}_{t}}
+\newcommand{\SNT}{\widehat{\Sigma}_{nt}}
+\newcommand{\SP}{\widehat{\Sigma}}
+
+\newcommand{\comm}[1]{{\emph{ \color{blue}{#1}}}}
+\newcommand{\commr}[1]{{\emph{ \color{red}{#1}}}}
+\newcommand{\commg}[1]{{\emph{ \color{green}{#1}}}}
+
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+
+\usepackage{steinmetz}
+
+\begin{document}
+	
+		\begin{Figure}		
+			\centering
+			\includegraphics[width=17cm]{0002}
+		\end{Figure}
+		\thispagestyle{empty} % Serve para não numerar essa página, usados em capas de trabalhos.
+		\setcounter{page}{0}
+		%\begin{Figure}		
+		%	\centering
+		%	\includegraphics[width=17cm]{0003}
+			%   \captionof{figure}{my caption of the fugure}
+		%\end{Figure}		
+		\tableofcontents
+		\thispagestyle{empty} 
+		\newpage
+		
+		
+			\section{Materiais Utilizados:}
+				
+			\hspace{-0.525cm}$\bullet$	Protoboard\\
+			$\bullet$   Gerador de função\\
+			$\bullet$	Indutor Variável (1H)\\
+			$\bullet$	Resistor Variável (470$\Omega$)\\
+			$\bullet$   Osciloscópio\\
+			$\bullet$   Capacitor Variável (0,1uF)\\
+			$\bullet$	Multímetro.\\
+			$\bullet$   Cabos para conexões.\\\\\\
+			
+			\section{Procedimento Experimental}
+			
+			\textbf{Objetivo:} Verificar experimentalmente as características de circuitos RLC em série quando excitados por uma fonte de tensão senoidal em regime permanente.
+			Primeiramente, fixou-se  os valores dos componentes variáveis(resistor, indutor e capacitor) para R = 470$\Omega$, L = 1 H, C = 0,1$\mu $F. Logo após, conectando-se à uma fonte tensão senoidal de valor máximo(\.{V}$_m$) igual à 3V e ligando os elementos por meio de fios jumpers, montou-se o circuito abaixo com o propósito de medir as quedas de tensões \.{V}$_R$,\.{V}$_L$,\.{V}$_C$ e \.{V}$_1$ em diferentes frequências ajustadas.  
+			
+			\begin{Figure}
+				\centering
+				\includegraphics[width=7cm]{e1}
+				\label{fig}
+				%   \captionof{figure}{my caption of the fugure}
+			\end{Figure}
+			
+			Em seguida, calculamos a frequência de ressonância RLC em série pela seguinte fórmula:
+			
+			\vspace{0.2cm}
+			\begin{Figure}
+				\centering
+				\includegraphics[width=4cm]{e2}
+				\label{fig}
+				%   \captionof{figure}{my caption of the fugure}
+			\end{Figure}
+			
+			\paragraph{} Assim, iniciou-se as medidas das quedas de tensões \.V$_R$,\.V$_L$,\.V$_C$ e \.V$_1$ utilizando-se do osciloscópio para visualizar as formas de onda(senoidal), valores das tensões nos componentes e as respectivas fases associadas considerando a corrente \.I na referência(ângulo de fase = 0°). Nesse caso, ajustou-se diferentes valores de frequências, sendo que para cada ajuste , utilizou-se a seguinte sequência de medições no osciloscópio:
+			
+			\begin{Figure}
+				\centering
+				\includegraphics[width=13cm]{e3}
+				\label{fig}
+				%   \captionof{figure}{my caption of the fugure}
+			\end{Figure}
+			
+			Com base nos valores de períodos medidos por meio do osciloscópio, calculou-se os ângulos de fases da tensão \.V através das seguintes relações:
+			
+			\begin{Figure}
+			\centering
+			\includegraphics[width=4cm]{e4}
+			\label{fig}
+			%   \captionof{figure}{my caption of the fugure}
+			\end{Figure}
+			
+			Dessa forma, com os dados obtidos experimentalmente e as fases das tensões correspondentes calculadas anteriormente, montou-se a seguinte tabela geral:
+			
+			\vspace{0.2cm}
+			\begin{center}
+			\begin{tabular}{|l|l|l|l|l|l|l|l|}	
+				\hline
+				$F(hz)$   & \.V$_R$(V) & \.V$_L$(V) & \.V$_C$(V) & \.V$_1$(V)   & \.V(V) & $\Delta t(\mu s)$    \\ \hline
+				250 & \text{0,29}$\phase{0\textdegree}$&\text{1,06}$\phase{90\textdegree}$&\text{3,60}$\phase{-90\textdegree}$&\text{3,04}$\phase{-90\textdegree}$& \text{2,88}$\phase{-82,80\textdegree}$ & 920 \\ \hline
+				350 & \text{0,59}$\phase{0\textdegree}$&\text{2,88}$\phase{90\textdegree}$&\text{5,60}$\phase{-90\textdegree}$& \text{2,92}$\phase{-90\textdegree}$&\text{3,04}$\phase{-73,08\textdegree}$ & 580 \\ \hline
+				500 & \text{2,24}$\phase{0\textdegree}$&\text{15,40}$\phase{90\textdegree}$&\text{14,60}$\phase{-90\textdegree}$&\text{0,20}$\phase{-90\textdegree}$&\text{2,76}$\phase{0\textdegree}$&0\\ \hline
+				650 & \text{0,76}$\phase{0\textdegree}$&\text{6,80}$\phase{90\textdegree}$&\text{3,76}$\phase{-90\textdegree}$&\text{3,20}$\phase{90\textdegree}$&\text{3,04}$\phase{70,20\textdegree}$ &  300 \\ \hline
+				750 & \text{0,54}$\phase{0\textdegree}$&\text{5,40}$\phase{90\textdegree}$&\text{2,08}$\phase{-90\textdegree}$&\text{3,00}$\phase{90\textdegree}$&\text{3,00}$\phase{72,90\textdegree}$ & 270 \\ \hline
+				
+			\end{tabular}		
+			\end{center}
+			
+			\section{Simulação:}
+			
+			\subsection{Circuito para medir tensão na resistência e no indutor:}
+			
+			\begin{Figure}
+				\centering
+				\includegraphics[width=13cm]{circuitoparamedirvrevL}
+				\label{fig}
+				%   \captionof{figure}{my caption of the fugure}
+			\end{Figure}
+			
+			\newpage
+			
+				\begin{Figure}
+					\centering
+					\includegraphics[width=10cm]{250hz}
+					\label{fig}
+					%   \captionof{figure}{my caption of the fugure}
+					\center{Figura 3: Gráfico de tensão na resistência e no indutor para frequência 250Hz.}
+				\end{Figure}
+				
+			
+			\begin{Figure}
+				\centering
+				\includegraphics[width=10cm]{350hz}
+				\label{fig}
+				%   \captionof{figure}{my caption of the fugure}
+				\center{Figura 4: Gráfico de tensão na resistência e no indutor para frequência 350Hz.}
+			\end{Figure}
+			
+			
+			\begin{Figure}
+				\centering
+				\includegraphics[width=10cm]{500hz}
+				\label{fig}
+				%   \captionof{figure}{my caption of the fugure}
+				\center{Figura 5: Gráfico de tensão na resistência e no indutor para frequência 500Hz.}
+			\end{Figure}
+			
+			
+				
+				\begin{Figure}
+					\centering
+					\includegraphics[width=10cm]{650hz}
+					\label{fig}
+					%   \captionof{figure}{my caption of the fugure}
+						\center{Figura 6: Gráfico de tensão na resistência e no indutor para frequência 650Hz.}
+				\end{Figure}
+			
+				
+					\begin{Figure}
+						\centering
+						\includegraphics[width=10cm]{750hz}
+						\label{fig}
+						%   \captionof{figure}{my caption of the fugure}
+						\center{Figura 7: Gráfico de tensão na resistência e no indutor para frequência 750Hz.}
+					\end{Figure}
+					
+					
+					\subsection{Circuito para medir tensão no capacitor:}
+						\begin{Figure}
+							\centering
+							\includegraphics[width=13cm]{circuitoparamedirVC}
+							\label{fig}
+							%   \captionof{figure}{my caption of the fugure}
+						\end{Figure}
+						
+						\newpage
+						
+						\begin{Figure}
+							\centering
+							\includegraphics[width=10cm]{250hzindutor}
+							\label{fig}
+							%   \captionof{figure}{my caption of the fugure}
+							\center{Figura 8: Gráfico de tensão no capacitor para frequência 250Hz.}
+						\end{Figure}
+						
+						
+						\begin{Figure}
+							\centering
+							\includegraphics[width=10cm]{350hzindutor}
+							\label{fig}
+							%   \captionof{figure}{my caption of the fugure}
+								\center{Figura 9: Gráfico de tensão no capacitor para frequência 350Hz.}
+						\end{Figure}
+					
+						
+						\begin{Figure}
+							\centering
+							\includegraphics[width=10cm]{500hzindutor}
+							\label{fig}
+							%   \captionof{figure}{my caption of the fugure}
+							\center{Figura 10: Gráfico de tensão no capacitor para frequência 500Hz.}
+						\end{Figure}
+						
+						
+						\begin{Figure}
+							\centering
+							\includegraphics[width=10cm]{650hzindutor}
+							\label{fig}
+							%   \captionof{figure}{my caption of the fugure}
+							\center{Figura 11: Gráfico de tensão no capacitor para frequência 650Hz.}
+						\end{Figure}
+						
+						
+						\begin{Figure}
+							\centering
+							\includegraphics[width=10cm]{750hzindutor}
+							\label{fig}
+							%   \captionof{figure}{my caption of the fugure}
+							\center{Figura 12: Gráfico de tensão no capacitor para frequência 750Hz.}
+						\end{Figure}					
+						\subsection{Calcular tensão \.{V}$_1$:}
+						\begin{Figure}
+							\centering
+							\includegraphics[width=9cm]{250hzV1}
+							\label{fig}
+							%   \captionof{figure}{my caption of the fugure}
+							\center{Figura 13: Gráfico de tensão \.{V}$_1$ para frequência 250Hz.}
+						\end{Figure}
+						
+						\newpage
+						
+						\begin{Figure}
+							\centering
+							\includegraphics[width=10cm]{350hzV1}
+							\label{fig}
+							%   \captionof{figure}{my caption of the fugure}
+							\center{Figura 14: Gráfico de tensão \.{V}$_1$ para frequência 350Hz.}
+						\end{Figure}
+						
+						
+						\begin{Figure}
+							\centering
+							\includegraphics[width=10cm]{500hzV1}
+							\label{fig}
+							%   \captionof{figure}{my caption of the fugure}
+							\center{Figura 15: Gráfico de tensão \.{V}$_1$ para frequência 500Hz.}
+						\end{Figure}
+						
+						
+						\begin{Figure}
+							\centering
+							\includegraphics[width=10cm]{650hzV1}
+							\label{fig}
+							%   \captionof{figure}{my caption of the fugure}
+								\center{Figura 16: Gráfico de tensão \.{V}$_1$ para frequência 650Hz.}
+						\end{Figure}
+					
+						
+						\begin{Figure}
+							\centering
+							\includegraphics[width=9.5cm]{750hzV1}
+							\label{fig}
+							%   \captionof{figure}{my caption of the fugure}
+							\center{Figura 17: Gráfico de tensão \.{V}$_1$ para frequência 750Hz.}
+						\end{Figure}
+						
+						
+						\subsection{Circuito para medir a tensão total (\.{V}$_T$):}
+					
+					\begin{Figure}
+						\centering
+						\includegraphics[width=9.5cm]{250hzVtotal}
+						\label{fig}
+						%   \captionof{figure}{my caption of the fugure}
+						\center{Figura 18: Gráfico de tensão \.{V}$_T$ para frequência 250Hz.}
+					\end{Figure}
+									
+					\begin{Figure}
+						\centering
+						\includegraphics[width=9.5cm]{350hzVtotal}
+						\label{fig}
+						%   \captionof{figure}{my caption of the fugure}
+						\center{Figura 19: Gráfico de tensão \.{V}$_T$ para frequência 350Hz.}
+					\end{Figure}
+												
+					\begin{Figure}
+						\centering
+						\includegraphics[width=10cm]{500hzVtotal}
+						\label{fig}
+						%   \captionof{figure}{my caption of the fugure}
+						\center{Figura 20: Gráfico de tensão \.{V}$_T$ para frequência 500Hz.}
+					\end{Figure}
+					
+					
+					\begin{Figure}
+						\centering
+						\includegraphics[width=10cm]{650hzVtotal}
+						\label{fig}
+						%   \captionof{figure}{my caption of the fugure}
+						\center{Figura 21: Gráfico de tensão \.{V}$_T$ para frequência 650Hz.}
+					\end{Figure}
+					
+					
+					\begin{Figure}
+						\centering
+						\includegraphics[width=10cm]{750hzVtotal}
+						\label{fig}
+						%   \captionof{figure}{my caption of the fugure}
+						\center{Figura 22: Gráfico de tensão \.{V}$_T$ para frequência 750Hz.}
+					\end{Figure}
+					
+					\section{Conclusão:}
+					\quad No circuito RLC em série,percebemos que com a variação da frequência modificamos a impedância do circuito,devido a dependência que esta tem em relação a impedância capacitiva e indutiva (presentes no circuito).\\
+					
+					\quad Uma das variações que foram percebidas foi a angular, nos ângulos dos fasores que medimos em V$_1$ e V$_T$ principalmente.Já com relação a frequência de ressonância ($\approx $500hz),onde sabemos que X$_C$ = X$_L$, o circuito é praticamente resistivo (indutâncias não tem contribuição significativa para o circuito, praticamente se anulam) e V$_R$ e V$_T$ ficam em fase.
+					
+					
+					
+					\section{Bibliografia:}
+					BOYLESTAD, R. L. Introdução à Análise de Circuitos. 10ª edição. São Paulo: Pearson Education do Brasil, 2004.
+					
+\end{document}
