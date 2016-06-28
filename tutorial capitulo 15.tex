@@ -1,0 +1,392 @@
+\documentclass[letterpaper,12pt,final]{article}% pode colocar final ou draft
+\usepackage[letterpaper,hmargin={2.0cm,2.0cm},vmargin={2.0cm,2.0cm}]{geometry}%controle de margens-muito bom pacote
+\linespread{1.0}%1 para normal, 1.3 para 1 1/2 e 1.6 para espaçamento duplo
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{icomma}
+\usepackage{multicol}
+%\usepackage{textcomp}
+\usepackage{amsthm,amsfonts,amssymb,amsxtra}
+\usepackage[all]{xy}
+\usepackage{enumerate} % Este pacote é para mudar o padrão do ENUMERATE
+\usepackage{graphicx,color}
+%\usepackage{psfrag}
+%\pagestyle{plain}% numera as paginas no centro rodapé
+\usepackage{indentfirst} % identar primeiro parágrafo
+\usepackage[subfigure]{ccaption} % controle dos captions dos floats
+%\captionstyle{\raggedright } % Captions começando da esquerda para direita
+%\raggedright, \centering e \raggedleft % são alternativas
+%\hangcaption % identar o título da tabela
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+\usepackage{titletoc} % não identar sumario
+\dottedcontents{chapter}[1.2cm]{}{1.2cm}{1pc} % não identar sumario
+\dottedcontents{section}[1.2cm]{}{1.2cm}{1pc} % não identar sumario
+\dottedcontents{subsection}[1.2cm]{}{1.2cm}{1pc} % não identar sumario
+\dottedcontents{subsubsection}[1.2cm]{}{1.2cm}{1pc} % não identar sumario
+\usepackage{latexsym}
+\usepackage{amstext}
+%\usepackage[dvips]{graphicx}
+%\usepackage[all]{xy}
+%\usepackage{tabularx}
+%\usepackage{setspace}
+%\usepackage{titletoc}
+%\dottedcontents{chapter}[1.2cm]{}{1.2cm}{1pc}
+%\dottedcontents{section}[1.2cm]{}{1.2cm}{1pc}
+%\dottedcontents{subsection}[1.2cm]{}{1.2cm}{1pc}
+%\dottedcontents{subsubsection}[1.2cm]{}{1.2cm}{1pc}
+\pagestyle{empty}
+
+\newcommand{\nequiv}{\equiv \hspace*{-12pt} / \hspace*{8pt}}
+\newcommand{\Eq}{equation}
+\newcommand{\EA}{eqnarray}
+\newcommand{\EM}{multline}
+\newcommand{\aaa}{\`a }
+\newcommand{\eee }{\`{e} }
+
+\newcommand{\eie}{\'{e} }
+\newcommand{\iii}{\`{\i} }
+\newcommand{\ooo}{\`{o} }
+\newcommand{\uuu}{\`{u} }
+\newcommand{\AAA}{\`{A} }
+\newcommand{\EEE}{\`{E} }
+\newcommand{\EIE}{\'{E} }
+\newcommand{\III}{\`{I} }
+\newcommand{\OOO}{\`{O} }
+\newcommand{\UUU}{\`{U} }
+\newcommand{\bm}[1]{{\mathbf{#1}}}
+\newcommand{\cm}[1]{{\mathcal{#1}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+
+
+
+\newcommand{\hh}{{\,\,}}          % buono per a_b
+\newcommand{\Hh}{{\,\,\,}}
+\newcommand{\HH}{{\,\,\,\,}}
+\newcommand{\HHH}{{\,\,\,\,\,\,}} %uguale a \quad; qqquad e' il doppio
+\newcommand{\B}{{\!\!}}
+\newcommand{\BB}{{\!\!\!\!}}
+\newcommand{\BBB}{{\!\!\!\!\!\!}} %inverte caratteri, infatti 3! sovrappone
+\newcommand{\Cont}{{\mathcal{C}}}
+\newcommand{\Dcal}{{\mathcal{D}}}
+\newcommand{\nhu}[1]{\left\|{#1}\right\|_{H^1}}
+\newcommand{\nhm}[1]{\left\|{#1}\right\|_{H^m}}
+\newcommand{\nh}[1]{\left\|{#1}\right\|_{H}}
+\newcommand{\nr}[1]{\left\|{#1}\right\|_{r}}
+\newcommand{\n}[1]{\left\|{#1}\right\|}
+\newcommand{\m}[1]{\left|{#1}\right|}
+\newcommand{\croch}[1]{\langle{#1}\rangle}
+\newcommand{\nhd}[1]{\left\|{#1}\right\|_{H^2}}
+\newcommand{\nld}[1]{\left\|{#1}\right\|_{L^2}}
+\newcommand{\nLd}[1]{\left\|{#1}\right\|_{[L^2]^2}}
+\newcommand{\nE}[1]{\left\|{#1}\right\|_{E}}
+\newcommand{\nlp}[1]{\left\|{#1}\right\|_{L^p}}
+\newcommand{\nwp}[1]{\left\|{#1}\right\|_{W^{1,p}}}
+\newcommand{\nw}[1]{\left\|{#1}\right\|_{W}}
+\newcommand{\nwpr}[1]{\left\|{#1}\right\|_{W'}}
+\newcommand{\nli}[1]{\left\|{#1}\right\|_{L^\infty}}
+\newcommand{\pt}[1]{\left({#1}\right)}
+\newcommand{\pq}[1]{\left[{#1}\right]}
+\newcommand{\nhe}[1]{\left\|{#1}\right\|_{H}}
+
+\newcommand{\pg}[1]{\left\{{#1}\right\}}
+\newcommand{\scl}[1]{\langle\,{#1}\,\rangle}
+\newcommand{\utd}{\widetilde{u}}
+
+\newcommand{\uht}{\widehat{u}}
+\newcommand{\ubr}{\overline{u}}
+\DeclareMathOperator{\supess}{supess}
+\DeclareMathOperator{\infess}{infess}
+
+\newcommand{\prefp}[1]{(\ref{#1})}
+\newcommand{\pref}[1]{(\ref{#1})}
+%\newcommand{\tref}[1]{\ref{#1}\ }
+\newcommand{\trefp}[1]{\ref{#1}}
+\newcommand{\tref}[1]{\ref{#1}}
+
+\newcommand{\fuc}{Fu\v c\'\i k }
+\newcommand{\uc}[1]{\widehat{u_{#1}}}%\newcommand{\uc}{\widehat{u}}
+
+
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bz}{\mathbf{z}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bh}{\mathbf{h}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\Ldd}{[L^2]^2}
+\newcommand{\LOdd}{[L^2(\Omega)]^2}
+\newcommand{\ST}{\widehat{\Sigma}_{t}}
+\newcommand{\SNT}{\widehat{\Sigma}_{nt}}
+\newcommand{\SP}{\widehat{\Sigma}}
+
+\newcommand{\comm}[1]{{\emph{ \color{blue}{#1}}}}
+\newcommand{\commr}[1]{{\emph{ \color{red}{#1}}}}
+\newcommand{\commg}[1]{{\emph{ \color{green}{#1}}}}
+
+\newcommand{\sn}{sen \; }
+\newcommand{\tg}{tg \; }
+\newcommand{\cossec}{cossec \; }
+
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+
+
+\begin{document}
+
+\begin{center}
+{\large \bf UNIVERSIDADE FEDERAL DE UBERLÂNDIA } \\[2mm]
+{\large \bf ENGENHARIA DE SOFTWARE} \\ [1mm]%
+\end{center}
+%\begin{footnotesize}
+%\vspace*{-0.2cm}
+
+\hspace{2cm}
+\begin{center}
+\vspace{5cm}
+\textbf{CAPÍTULO 15} - MANTENDO O TEMPO, LANÇANDO PROGRAMAS E AGENDANDO TAREFAS
+	
+\vspace{8cm}
+\textbf{Nome}: Matheus Henrique Marconi
+	
+\vspace{0.5cm}
+\textbf {Matrícula}: 11511EEL005
+	
+\vspace{0.5cm}
+\textbf {Curso}: Engenharia Elétrica
+\end{center}
+
+\newpage
+\tableofcontents
+\newpage
+
+
+\vspace{1cm}
+	
+\section{A FUNÇÃO time.sleep()}
+
+\paragraph{} Com referência a 1970, essa função nos indica qual o tempo decorrido até o momento e devolve um float.
+Se quisermos analisar quanto tempo um bloco de código demora para ser executado podemos fazer por exemplo:
+
+\vspace{0.25cm}
+\includegraphics[width=8cm]{figura1.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+
+\vspace{1cm}
+E o que esse programa fará?
+
+\vspace{0.2cm}
+
+\paragraph{} O programa imprimirá Tick e pausará por 1 segundo, em seguida imprimirá Tick e Tock três vezes e pausará 5 segundos.
+Às vezes, é desconfortável esperar por muitos segundos, por exemplo, time.sleep(30), o programá esperará por 30 segundos para realizar a próxima tarefa. Se quisermos contornar isso, podemos utilizar um for para fazer 30 loops de time.sleep(1).
+
+\subsection{Completando Números}
+
+\paragraph{} Ao trabalhar com os tempos , muitas vezes você vai encontrar valores float com muitos dígitos após o decimal. Para tornar estes valores mais fácil trabalhar, você pode abreviá-los com a função de Python built-in round( ), que arredonda um flutuador com a precisão que você especificar. Basta passar o número que você deseja arredondar mais um segundo argumento opcional que representa quantos dígitos depois da vírgula você deseja arredondar para ele. Se você omitir o segundo argumento, a round() arredonda o número para o inteiro mais próximo, veja o exemplo:
+
+\vspace{0.25cm}
+\includegraphics[width=4cm]{figura2.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+
+\vspace{1cm}
+Após a importação de tempo e armazenar time.time( ), chamamos round(now, 2)
+para completar dois dígitos após o decimal , round(hoje , 4) para arredondar a quatro
+dígitos após o decimal , e round(now) para arredondar para o número inteiro mais próximo.
+
+\subsection{Projetando um Super Cronômetro}
+
+\paragraph{} Suponhamos que você queira automatizar tarefas relacionadas a tempo, realmente chatas. Assim, suponhamos também que não encontre um aplicativo para alguma das interfaces que usa no dia-a-dia. Então, como criar um super cronômetro para fazer algumas tarefas para você?
+	
+\vspace{0.2cm}
+Podemos assim, seguir os passos. Em alto nível, seu programa deverá:
+	
+\vspace{0.2cm}
+Imprimir o número da volta, tempo total e tempo de volta.
+E isso significa que seu código terá que fazer também:
+		 
+\vspace{0.2cm}
+\begin{enumerate}
+\item Encontrar o tempo atual chamando time.time( ) e armazená-lo como um timestamp no início do programa , bem como ao início de cada volta.
+		
+\vspace{0.2cm}
+\item Mantenha um contador de voltas e incrementá-lo cada vez que o usuário pressiona enter.
+		
+\vspace{0.2cm}
+\item Calcule o tempo decorrido subtraindo timestamps.
+		
+\vspace{0.2cm}
+\item Tratar a exceção KeyboardInterrupt de modo que o usuário pode pressionar ctrl- C para sair, abrir uma nova janela do editor de arquivo e salvá-lo como stopwatch.py.
+		
+\vspace{0.2cm}
+Ok, tudo isso parece difícil correto? Não, vamos a seguir estudar cada parte que necessitamos saber para resolver nosso problema.
+	
+\subsubsection{ETAPA 1: CONFIGURANDO OS PROGRAMAS COM TEMPO}
+
+\vspace{0.1cm}
+\paragraph{} O programa cronômetro vai precisar usar a hora atual, então você vai quererimportar o módulo tempo. Seu programa também deve imprimir algumas breves instruções para o usuário antes de chamar input(), então o temporizador pode começar depois que o usuário entrar. Em seguida, o código irá começar a controlar os tempos de volta. Digite o seguinte código no editor de arquivo, escrevendo um comentário TODO como um espaço reservado para o resto do código:
+		
+\vspace{0.5cm}
+\includegraphics[width=10cm]{figura3.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+		
+		
+\subsubsection{ETAPA 2: PISTA E IMPRESSÃO DE TEMPOS DE VOLTA}
+		
+\vspace{0.3cm}
+\paragraph{}Agora, escreveremos o código para iniciar cada nova volta e calcular quanto o lap anterior  tomou de tempo e calcular o tempo total decorrido desde o início do cronômetro. Vamos mostrar o tempo de volta e o tempo total e aumentar o número de voltas para cada nova volta. Faça da seguinte forma:
+		
+\vspace{0.25cm}
+\includegraphics[width=10cm]{figura4.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+			
+\paragraph{}Se o usuário pressionar ctrl-C para parar o cronômetro, a execução KeyboardInterrupt será ativada, e o programa irá falhar se a sua execução não é uma instrução correta. Para evitar isso, nós vamos tratar a exceção do código, então quando ctrl-C é pressionado e a exceção é ativada para imprimir Feito, em vez da mensagem de erro KeyboardInterrupt.
+		
+\paragraph{}Até que isso aconteça, a execução está dentro de um loop infinito que chama	input( ) e espera até o usuário pressionar Enter para terminar uma volta. Quando a volta terminar, calculamos quanto tempo subtraindo a hora de início da volta, lasttime, a partir do momento atual, time.time( ). Calculamos o tempo total decorrido subtraindo o tempo do início startTime, a partir de um x tempo.Uma vez que os resultados desses cálculos de tempo terá muitos dígitos após o ponto decimal (como 4,766272783279419), usamos a função round( ) para arredondar o valor float para dois dígitos em w e x.
+No y, nós imprimimos o número da volta, o tempo total decorrido e o tempo da volta.
+\paragraph{}Uma vez que o usuário pressionar enter para o input( )  a chamada irá imprimir uma nova linha na tela, funcionando para evitar o duplo espaçamento de saída. Depois de imprimir as informações que prepara-se para a próxima volta adicionando 1 ao lapNum e definindo lasttime para a hora atual, o que é a hora de início da volta seguinte.
+
+\newpage
+\section{O MÓDULO DATETIME}
+		
+\paragraph{}Se você quiser exibir uma data em um formato mais conveniente, ou fazer aritmética com datas (por exemplo, descobrir que data foi 205 dias atrás, ou que data é de 123 dias a partir de agora), você deve usar o módulo de data e hora. O módulo datetime tem o seu próprio tipo de dados de data e hora e valores de data e hora que representam um momento específico no tempo. Observe o seguinte código:
+		
+\vspace{0.25cm}
+\includegraphics[width=10cm]{figura5.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+		
+\paragraph{} Basicamente, estamos chamando a hora momentânea de acordo com o relógio do computador. A data e a hora do datetime será convertida para o fuso horário local e será guardada em variáveis.
+		
+\subsection{O tipo de data DELTATIME}
+	
+\paragraph{}O módulo de data e hora também fornece um tipo de dados timedelta , que representa um duração no tempo em vez de um momento no tempo. Observe a seguir:
+		
+\vspace{0.25cm}
+\includegraphics[width=10cm]{figura6.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+			
+\paragraph{} Para criar um objeto timedelta, use a função datetime.timedelta( ). Essa função datetime.timedelta( ) recebe argumentos como semanas, dias, horas, minutos, segundos, milissegundos e microssegundos. Não há mês ou ano palavra-chave argumento porque um mês ou um ano é uma quantidade variável de tempo dependendo do mês ou ano específico. Um objecto do total tem timedelta duração representada em dias, segundos e microssegundos. Estes números são armazenados nos dias, segundos, e atributos microssegundos, respectivamente. O totalseconds( ) método irá retornar a duração em número de segundos sozinho. Passando um objeto timedelta para str( ) irá retornar fomatado.
+\paragraph{} Neste exemplo , passamos argumentos para datetime.delta () para especificar uma duração de 11 dias, 10 horas, 9 minutos e 8 segundos.
+Finalmente, passando o objeto timedelta para str ( ) retorna uma string explicando claramente a duração. Os operadores aritméticos pode ser usado para realizar aritmética na data valores de data e hora . Por exemplo , para calcular a data de 1.000 dias a partir de agora.
+			
+\subsection{PARANDO ATÉ UMA DATA ESPECÍFICA!}
+	
+\paragraph{}O método time.sleep () permite pausar um programa para um determinado número de segundos. Usando um loop while, você pode pausar seus programas até uma data específica. Por exemplo, o seguinte código vai continuar a loop até o Dia das Bruxas de 2016:
+		
+\vspace{0.25cm}
+\includegraphics[width=10cm]{figura7.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+		
+\subsection{Transformando objetos datetimes em strings}
+		
+		
+\paragraph{} Use o método strftime( ) para exibir um objeto datetime como uma string. (O f em nome da função strftime( ) representa o formato. O método strftime( ) é a formatação de strings do Python.
+		
+\subsection{Transformando strings em objetos datetimes}
+		
+\paragraph{} Se você tem uma série de informações de data, como "2015/10/21 16:29:00"  ou  "21 de outubro de 2015", e a necessidade de convertê-lo em um objeto de data e hora, utilize a função datetime.datetime.strptime( ). A função strptime( ) é o inverso do método strftime( ).
+		
+\vspace{0.25cm}
+\includegraphics[width=10cm]{figura8.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+		
+\newpage		
+\section{INICIANDO MULTITHREADING}
+	
+\paragraph{} Para introduzir o conceito de multithreading , vejamos um exemplo. Digamos que você queira agendar algum código para executar depois de um atraso algum tempo, você pode adicionar código como o seguinte no início do seu programa:
+		
+\vspace{0.25cm}
+\includegraphics[width=8cm]{figura9.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+		
+\paragraph{} Este código designa uma hora de início de 31 de Outubro de 2029, e continua chamando time.sleep (1) até que chega a hora de início. Seu programa não pode fazer nada enquanto espera para o loop de time.sleep( ). Ao invés de ter todo o seu código esprando até que a função time.sleep( )
+termine você pode executar o código separadamente usando o módulo de threading do Python. O segmento separado fará uma pausa para as chamadas time.sleep. Enquanto isso, seu programa pode fazer outro trabalho no thread original. Dessa forma, você leitor precisará inserir o seguinte código de um novo arquivo e salvá-lo como threadDemo.py, assim:
+		
+\vspace{0.25cm}
+\includegraphics[width=7cm]{figura10.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+		
+\paragraph{} Não podemos nos confundir, se print ('Fim do programa') é a última linha do programa, você pode pensar que ele deve ser a última coisa impressa. Não, pois Wake up! vem depois dela é que quando threadObj.start( ) é chamado. O alvo de threadObj é executado em um novo segmento de execução. Pense nisso como um segundo dedo que aparece no início da função takeANap ( ). O principal segmento continua a imprimir ('fim do programa'). Enquanto isso, o novo segmento que foi executar o time.sleep (5) faz uma pausa durante 5 segundos. Depois disso, acorda de sua soneca de 5 segundos e ele imprime 'Wake up!' e, em seguida, retorna a partir da função takeANap( ). Cronologicamente, 'Acorde!' é a última coisa impressa pela
+o programa.
+\paragraph{} Normalmente, um programa termina quando a última linha de código no arquivo foi executado(ou a função sys.exit( ) é chamada). Mas threadDemo.py tem dois tópicos. O primeiro é o segmento original que começou no inicio do programa e termina após print('Fim do programa') e o segundo segmento é criado quando threadObj.start( ) é chamado, começa no início da função takeANap( ), e termina após takeANap( ). Um programa Python não terminará até que todos os seus segmentos tenham terminado. Quando você executou threadDemo.py, embora o segmento original tinha rescindido, o segundo segmento ainda estava executando o time.sleep(5).
+		
+\subsection{Passando Argumentos para a Função de Destino}
+
+\paragraph{} Se a função de destino que você deseja executar no novo segmento leva argumentos, você pode passar argumentos a função do alvo para threading.Thread( ). Por exemplo:
+		
+\vspace{0.25cm}
+\includegraphics[width=7cm]{figura11.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+		
+\paragraph{} Esta chamada print() tem três argumentos regulares, ' Cats' , 'Dogs' e 'sapos', e um argumento de palavra-chave, Sep. Os argumentos regulares podem ser passados mantendo o tempo, agendamento de Tarefas e Lançando Programas como uma lista ao argumento args palavra-chave no threading.Thread( ). 
+		
+\subsection{Problemas de Concorrência}
+	
+\paragraph{} Para evitar a simultaniedade, nunca deixe vários segmentos ler ou escrever as mesma variáveis> Quando criar um novo objeto thread, veja se sua função utiliza apenas variáveis locais para evitar problemas de depuração.
+
+\newpage		
+\section{LANÇAMENTO DE OUTROS PROGRAMAS NO PHYTON}
+		
+Seu programa Python pode começar outros programas no seu computador com a função Popen( ). Se você tiver várias instâncias de uma aplicação aberta, cada um desses exemplos é um processo separado da mesmo programa. Por exemplo, se você abrir várias janelas do seu navegador ao mesmo tempo, cada uma dessas janelas é um processo diferente do browser. Veja a Figura para um exemplo de vários processos de calculadora abertos ao mesmo tempo. Cada processo pode ter vários segmentos. Ao contrário de threads, um processo não pode ler e escrever diretamente variáveis de outro processo.
+		
+\vspace{0.25cm}
+\includegraphics[width=10cm]{figura12.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+		
+\paragraph{} Podemos fazer isso em windows e Ubunto porém em ubuntu tem algumas diferenças, veja: 
+\paragraph{} O valor de retorno é um objeto Popen, que tem dois métodos úteis: poll() e espere(). O método poll () irá retornar Nenhum se o processo ainda está em execução no polltime( ). Se o programa tiver terminado, ele irá retornar código de saída inteiro do processo. Um código de saída é usado para indicar se o processo foi encerrado sem erros  ou se um erro causou o encerramento do processo. O método wait( ) irá bloquear até que o processo lançado foi finalizado. Isso é útil se você quiser que o seu programa faça uma pausa até que o usuário termine com o outro programa. O valor de retorno de wait( ) é o código de saída inteiro do processo. 
+		
+\vspace{0.25cm}
+\includegraphics[width=8cm]{figura13.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+		
+\paragraph{} No Windows, digite o seguinte e observe que a chamada wait( ) irá bloquear até que saia o programa de calculadora lançada.
+		
+\vspace{0.25cm}
+\includegraphics[width=9cm]{figura14.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+			
+\subsection{Passando argumentos linha de comando para Popen()}
+	
+\paragraph{} Você pode passar argumentos de linha de comando para os processos que você cria com Popen( ). Para fazer isso, você deve passar uma lista como o único argumento para Popen( ). O primeiro texto na lista será o nome do arquivo executável do programa que deseja iniciar, todas as cadeias subsequentes serão os argumentos de linha de comando que será passado para o programa quando é iniciado. A maioria dos aplicativos com uma interface gráfica do usuário (GUI) não usa o comando argumentos de linha de forma extensiva como linha de comando-base. Mas, a maioria das aplicações GUI aceitará um único argumento para um arquivo e os aplicativos abrirão imediatamente quando iniciado. Por exemplo, se você estiver usando o Windows, crie um arquivo de texto dessa forma:
+		
+\vspace{0.25cm}
+\includegraphics[width=10cm]{figura15.png}
+\label{fig}
+%   \captionof{figure}{my caption of the fugure}
+		
+\paragraph{} Aqui, não só irá iniciar o aplicativo bloco de notas, mas também abrirá imediatamente o arquivo C: \ hello.txt.
+		
+\subsection{Abrindo os arquivos com as aplicações pré definidas}
+
+\paragraph{} Abrindo arquivos com as aplicações predefinidas: Clicando duas vezes em um arquivo .txt no seu computador iniciará automaticamente a
+aplicação associada com a extensão de arquivo .txt. O computador terá várias dessas associações de extensões de arquivo já definidas. Python também pode abrir arquivos  desta forma com Popen( ). Cada sistema operacional tem um programa que executa o equivalente a duplo clique sobre um arquivo de documento para abri-lo. 
+
+\newpage
+\section{Bibliografia} 
+
+ \begin{thebibliography}{1} \bibitem{Navatec}Al Sweigart, \it{ Automate the Boring Stuff with Phyton, Pratical Programing for Total Beginners}, Novatec , 2015.
+\end{thebibliography}
+\end{enumerate}
+\end{document}
