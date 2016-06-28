@@ -1,0 +1,419 @@
+\documentclass[letterpaper,10pt,final]{article}% pode colocar final ou draft
+\usepackage[letterpaper,hmargin={2.5cm,2.5cm},vmargin={2.5cm,2.5cm}]{geometry}%controle de margens-muito bom pacote
+\linespread{1.0}%1 para normal, 1.3 para 1 1/2 e 1.6 para espaçamento duplo
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{icomma}
+\usepackage{comment}
+\usepackage{multicol}
+%\usepackage{textcomp}
+\usepackage{amsthm,amsfonts,amssymb,amsxtra}
+\usepackage[all]{xy}
+\usepackage{enumerate}    % Este pacote é para mudar o padrão do ENUMERATE
+\usepackage{graphicx,color}
+%\usepackage{psfrag}
+%\pagestyle{plain}% numera as paginas no centro rodapé
+\usepackage{indentfirst}                % identar primeiro parágrafo
+\usepackage[subfigure]{ccaption}             % controle dos captions dos floats
+%\captionstyle{\raggedright }                 % Captions começando da esquerda para direita
+%\raggedright, \centering e \raggedleft      %  são alternativas
+%\hangcaption                                % identar  o título da tabela
+\newcommand{\mat}[1]{\mbox{\boldmath{$#1$}}}
+
+\usepackage{titletoc}                                 % não identar sumario
+\dottedcontents{chapter}[1.2cm]{}{1.2cm}{1pc}         % não identar sumario
+\dottedcontents{section}[1.2cm]{}{1.2cm}{1pc}         % não identar sumario
+\dottedcontents{subsection}[1.2cm]{}{1.2cm}{1pc}      % não identar sumario
+\dottedcontents{subsubsection}[1.2cm]{}{1.2cm}{1pc}   % não identar sumario
+
+\usepackage{latexsym}
+\usepackage{amstext}
+%\usepackage[dvips]{graphicx}
+%\usepackage[all]{xy}
+%\usepackage{tabularx}
+%\usepackage{setspace}
+%\usepackage{titletoc}
+%\dottedcontents{chapter}[1.2cm]{}{1.2cm}{1pc}
+%\dottedcontents{section}[1.2cm]{}{1.2cm}{1pc}
+%\dottedcontents{subsection}[1.2cm]{}{1.2cm}{1pc}
+%\dottedcontents{subsubsection}[1.2cm]{}{1.2cm}{1pc}
+
+\newcommand{\nequiv}{\equiv \hspace*{-12pt} / \hspace*{8pt}}
+\newcommand{\Eq}{equation}
+\newcommand{\EA}{eqnarray}
+\newcommand{\EM}{multline}
+\newcommand{\aaa}{\`a }
+\newcommand{\eee }{\`{e} }
+
+\newcommand{\eie}{\'{e} }
+\newcommand{\iii}{\`{\i} }
+\newcommand{\ooo}{\`{o} }
+\newcommand{\uuu}{\`{u} }
+\newcommand{\AAA}{\`{A} }
+\newcommand{\EEE}{\`{E} }
+\newcommand{\EIE}{\'{E} }
+\newcommand{\III}{\`{I} }
+\newcommand{\OOO}{\`{O} }
+\newcommand{\UUU}{\`{U} }
+\newcommand{\bm}[1]{{\mathbf{#1}}}
+\newcommand{\cm}[1]{{\mathcal{#1}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+
+
+
+\newcommand{\hh}{{\,\,}}          % buono per a_b
+\newcommand{\Hh}{{\,\,\,}}
+\newcommand{\HH}{{\,\,\,\,}}
+\newcommand{\HHH}{{\,\,\,\,\,\,}} %uguale a \quad; qqquad e' il doppio
+\newcommand{\B}{{\!\!}}
+\newcommand{\BB}{{\!\!\!\!}}
+\newcommand{\BBB}{{\!\!\!\!\!\!}} %inverte caratteri, infatti 3! sovrappone
+\newcommand{\Cont}{{\mathcal{C}}}
+\newcommand{\Dcal}{{\mathcal{D}}}
+\newcommand{\nhu}[1]{\left\|{#1}\right\|_{H^1}}
+\newcommand{\nhm}[1]{\left\|{#1}\right\|_{H^m}}
+\newcommand{\nh}[1]{\left\|{#1}\right\|_{H}}
+\newcommand{\nr}[1]{\left\|{#1}\right\|_{r}}
+\newcommand{\n}[1]{\left\|{#1}\right\|}
+\newcommand{\m}[1]{\left|{#1}\right|}
+\newcommand{\croch}[1]{\langle{#1}\rangle}
+\newcommand{\nhd}[1]{\left\|{#1}\right\|_{H^2}}
+\newcommand{\nld}[1]{\left\|{#1}\right\|_{L^2}}
+\newcommand{\nLd}[1]{\left\|{#1}\right\|_{[L^2]^2}}
+\newcommand{\nE}[1]{\left\|{#1}\right\|_{E}}
+\newcommand{\nlp}[1]{\left\|{#1}\right\|_{L^p}}
+\newcommand{\nwp}[1]{\left\|{#1}\right\|_{W^{1,p}}}
+\newcommand{\nw}[1]{\left\|{#1}\right\|_{W}}
+\newcommand{\nwpr}[1]{\left\|{#1}\right\|_{W'}}
+\newcommand{\nli}[1]{\left\|{#1}\right\|_{L^\infty}}
+\newcommand{\pt}[1]{\left({#1}\right)}
+\newcommand{\pq}[1]{\left[{#1}\right]}
+\newcommand{\nhe}[1]{\left\|{#1}\right\|_{H}}
+
+\newcommand{\pg}[1]{\left\{{#1}\right\}}
+\newcommand{\scl}[1]{\langle\,{#1}\,\rangle}
+\newcommand{\utd}{\widetilde{u}}
+
+\newcommand{\uht}{\widehat{u}}
+\newcommand{\ubr}{\overline{u}}
+\DeclareMathOperator{\supess}{supess}
+\DeclareMathOperator{\infess}{infess}
+
+\newcommand{\prefp}[1]{(\ref{#1})}
+\newcommand{\pref}[1]{(\ref{#1})}
+%\newcommand{\tref}[1]{\ref{#1}\ }
+\newcommand{\trefp}[1]{\ref{#1}}
+\newcommand{\tref}[1]{\ref{#1}}
+
+\newcommand{\fuc}{Fu\v c\'\i k }
+\newcommand{\uc}[1]{\widehat{u_{#1}}}%\newcommand{\uc}{\widehat{u}}
+
+\newcommand{\sn}{sen \; }
+
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bz}{\mathbf{z}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bh}{\mathbf{h}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\Ldd}{[L^2]^2}
+\newcommand{\LOdd}{[L^2(\Omega)]^2}
+\newcommand{\ST}{\widehat{\Sigma}_{t}}
+\newcommand{\SNT}{\widehat{\Sigma}_{nt}}
+\newcommand{\SP}{\widehat{\Sigma}}
+
+\newcommand{\comm}[1]{{\emph{ \color{blue}{#1}}}}
+\newcommand{\commr}[1]{{\emph{ \color{red}{#1}}}}
+\newcommand{\commg}[1]{{\emph{ \color{green}{#1}}}}
+
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+
+\begin{document}
+	
+		\begin{Figure}		
+			\centering
+			\includegraphics[width=17cm]{0002}
+		\end{Figure}
+		\thispagestyle{empty} % Serve para não numerar essa página, usados em capas de trabalhos.
+		\setcounter{page}{0}
+		%\begin{Figure}		
+		%	\centering
+		%	\includegraphics[width=17cm]{0003}
+			%   \captionof{figure}{my caption of the fugure}
+		%\end{Figure}		
+		\tableofcontents
+		\thispagestyle{empty} 
+		\newpage
+		
+		
+			\section{Materiais Utilizados:}
+				
+			\hspace{-0.525cm}$\bullet$	Protoboard\\
+			$\bullet$   Gerador de função\\
+			$\bullet$	Indutor Variável (1H)\\
+			$\bullet$	Resistor Variável (100$\Omega$)\\
+			$\bullet$   Osciloscópio\\
+			$\bullet$   Capacitor Variável (15nF)\\
+			$\bullet$	Multímetro.\\
+			$\bullet$   Cabos para conexões.\\\\\\
+			
+			\section{Procedimento Experimental}
+			
+			\textbf{Objetivo:} Verificar experimentalmente as relações existentes entre tensão e corrente em indutores e capacitores para diversos tipos de alimentação de circuitos.
+			
+			\section{Circuito com Indutor}
+						
+					
+			\vspace{0.2cm}
+			Experimentalmente, montamos o circuito RL para analisar as formas de onda: retangular, senoidal e triangular buscando os valores das tensões de pico. Os dados usados foram $f=1kHz$ e $V_{m}=3V$
+			
+			Observação: Analisando, percebemos que as variações são dadas pelos erros experimentais.
+			
+			\vspace{0.2cm}
+			Pela simulação de circuitos, temos o seguinte circuito:
+			
+			\begin{Figure}
+				\centering
+				\includegraphics[width=10cm]{screenshot004}
+				\label{fig}
+				%   \captionof{figure}{my caption of the fugure}
+			\end{Figure}
+			
+			\subsection{Sinal Senoidal}						
+			Para a onda senoidal, temos as seguintes equações:
+			
+			\begin{Figure}
+				\centering
+				\includegraphics[width=5cm]{screenshot005}
+				\label{fig}
+				%   \captionof{figure}{my caption of the fugure}
+			\end{Figure}
+			
+			Experimentalmente, aplicando-se um sinal senoidal na fonte, obteve-se:
+			
+			\vspace{0.2cm}
+			$V_L = 2,88$ V 
+			
+			\vspace{0.1cm}
+			$V_r = 44$ mV			
+			
+			\subsection{Sinal Retangular}			
+			Para a onda retangular, temos as seguintes equações:
+			
+			\begin{Figure}
+				\centering
+				\includegraphics[width=5cm]{screenshot006}
+				\label{fig}
+				%   \captionof{figure}{my caption of the fugure}
+			\end{Figure}
+			
+			Experimentalmente, aplicando-se um sinal senoidal na fonte, obteve-se:
+			
+			\vspace{0.2cm}
+			$V_L = 3,12$ V 
+			
+			\vspace{0.1cm}
+			$V_r = 96$ mV				
+						
+			\subsection{Sinal Triangular}				
+		    Para a onda retangular, temos as seguintes equações:
+			
+			\begin{Figure}
+				\centering
+				\includegraphics[width=5cm]{screenshot007}
+				\label{fig}
+				%   \captionof{figure}{my caption of the fugure}
+			\end{Figure}
+			
+			Experimentalmente, aplicando-se um sinal senoidal na fonte, obteve-se:
+			
+			\vspace{0.2cm}
+			$V_L = 2,88$ V 
+			
+			\vspace{0.1cm}
+			$V_r = 36$ mV								
+								
+		\section{Circuito com Capacitor}
+		
+		Primeiramente, montou-se o seguinte circuito RC:
+		
+	    \begin{Figure}
+	    	\centering
+		    \includegraphics[width=10cm]{screenshot000}
+		    \label{fig}
+	     	%   \captionof{figure}{my caption of the fugure}
+     	\end{Figure}
+	
+		Logo após, ajustou-se os valores de frequência e tensão para f=1KHz e Vm = 3V no gerador de função.  Em seguida,  para analisar as tensões no capacitor e no resistor em diferentes formas de onda, aplicou-se sinais senoidais, retangulares e triangulares na fonte.
+		
+		\subsection{Sinal Senoidal}
+		Para a onda senoidal, temos as seguintes equações:
+		
+		\begin{Figure}
+        	\centering
+        	\includegraphics[width=5cm]{screenshot001}
+        	\label{fig}
+        	%   \captionof{figure}{my caption of the fugure}
+       	\end{Figure}
+       	
+       	Experimentalmente, aplicando-se um sinal senoidal na fonte, obteve-se:
+       	
+       	\vspace{0.2cm}
+       	$V_c = 2,96$ V 
+       	
+       	\vspace{0.1cm}
+       	$V_r = 30,22$ mV
+       	
+       	\subsection{Sinal Retangular}
+       	 Para a onda retangular, temos as seguintes equações:
+       	 
+        \begin{Figure}
+          	\centering
+          	\includegraphics[width=5cm]{screenshot002}
+          	\label{fig}
+          	%   \captionof{figure}{my caption of the fugure}
+         \end{Figure}
+         
+         Experimentalmente, aplicando-se um sinal retangular na fonte, obteve-se:
+         
+         \vspace{0.2cm}
+         $V_c = 2,92$ V
+         
+         \vspace{0.1cm}
+         $V_r = 160$ mV  
+         
+         \subsection{Sinal Triangular}
+          Para a onda triangular, temos as seguintes equações:
+          
+          \begin{Figure}
+          	\centering
+          	\includegraphics[width=5cm]{screenshot003}
+          	\label{fig}
+          	%   \captionof{figure}{my caption of the fugure}
+          \end{Figure}
+          
+          Experimentalmente, aplicando-se um sinal triangular na fonte, obteve-se:
+          
+          \vspace{0.2cm}
+          $V_c = 2,88$ V
+          
+          \vspace{0.1cm}
+          $V_r = 22,8$ mV      
+          
+          \newpage
+          \section{SIMULAÇÃO DOS CIRCUITOS}    
+            \subsection{Simulação para Circuito LC} 
+            Circuito LC montado na simulação:
+            
+            \begin{Figure}
+            	\centering
+            	\includegraphics[width= 12cm]{simulacaoindutor}
+            	\label{fig}
+            	%   \captionof{figure}{my caption of the fugure}
+            \end{Figure}
+            
+            \subsubsection{Sinal Senoidal}
+            Pela simulação , obteve-se:
+            
+            \begin{Figure}
+            	\centering
+            	\includegraphics[width= 12cm]{indutorSENOIDAL}
+            	\label{fig}
+            	%   \captionof{figure}{my caption of the fugure}
+            \end{Figure}
+            
+            Na simulação, encontramos $V_{L}=3$V e $V_{R}=47$mV
+            
+            \subsubsection{Sinal Retangular}
+            Pela simulação , obteve-se:
+            
+            \begin{Figure}
+            	\centering
+            	\includegraphics[width= 12cm]{quadradasIndutor}
+            	\label{fig}
+            	%   \captionof{figure}{my caption of the fugure}
+            \end{Figure}
+            
+            Na simulação, encontramos $V_{L}=3,05$V e $V_{R}=74$mV
+            
+            \subsubsection{Sinal Triangular}
+            Pela simulação , obteve-se:
+            
+            \begin{Figure}
+            	\centering
+            	\includegraphics[width= 12cm]{triangularindutor}
+            	\label{fig}
+            	%   \captionof{figure}{my caption of the fugure}
+            \end{Figure}
+            
+            Na simulação, encontramos $V_{L}=3$V e $V_{R}=37$mV
+               
+          	\subsection{Simulação para Circuito RC}
+          	Circuito RC montado na simulação:
+          	
+          	\begin{Figure}
+          		\centering
+          		\includegraphics[width= 12cm]{capacitorcircuito}
+          		\label{fig}
+          		%   \captionof{figure}{my caption of the fugure}
+          	\end{Figure}
+          	
+          	\subsubsection{Sinal Senoidal}
+          	Pela simulação , obteve-se:
+          	
+          	\begin{Figure}
+          		\centering
+          		\includegraphics[width= 12cm]{capondasenoidal}
+          		\label{fig}
+          		%   \captionof{figure}{my caption of the fugure}
+          	\end{Figure}
+          	
+          	Na simulação, encontramos $V_{C}=3$V e $V_{R}=28,5$mV
+          	
+          	\subsubsection{Sinal Retangular}
+          	Pela simulação , obteve-se:
+          	
+          	\begin{Figure}
+          		\centering
+          		\includegraphics[width= 12cm]{pacondaquadrada}
+          		\label{fig}
+          		%   \captionof{figure}{my caption of the fugure}
+          	\end{Figure}
+          	
+          	Na simulação, encontramos $V_{C}=2,98$V e $V_{R}=920$mV
+          	
+          	\subsubsection{Sinal Triangular}
+          	Pela simulação , obteve-se:
+          	
+          	\begin{Figure}
+          		\centering
+          		\includegraphics[width= 12cm]{pacondatriangular}
+          		\label{fig}
+          		%   \captionof{figure}{my caption of the fugure}
+          	\end{Figure}	
+          	
+          	Na simulação, encontramos $V_{C}=2,98$V e $V_{R}=18$mV		
+
+            \newpage
+            \section{Conclusão:}
+            
+            \qquad Com base nos experimentos feitos, pode-se concluir que os valores das  medições de tensão e corrente no capacitor, indutor e resistor foram bastante próximos dos valores obtidos na simulação. 
+            Além disso, notou-se analiticamente verdadeiras as relações entre tensão e corrente para as equações teóricas de cada forma de onda. Por exemplo, nas ondas senoidais do circuito RC, foi possível verificar que a corrente está "adiantada" de 90° em relação à tensão no tempo, já no circuito RL, verificou-se que a corrente está "atrasada" de 90° em relação à tensão no tempo.
+            
+            
+            \section{Bibliografia:}
+            BOYLESTAD, R. L. Introdução à Análise de Circuitos. 10ª edição. São Paulo: Pearson Education do Brasil, 2004.
+            
+
+
+\end{document}
